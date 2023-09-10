@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Light-Grey: hsl(217, 12%, 63%);
+  --Medium-Grey: hsl(216, 12%, 54%);
+  --Dark-Blue: hsl(213, 19%, 18%);
+  --Very-Dark-Blue: hsl(216, 12%, 8%);
+  --primary: hsl(25, 97%, 53%);
+}
+
+body {
+  background-color: hsl(0, 0%, 0%);
+  color: var(--White);
+  min-height: 90vb;
+  font-family: "Overpass", sans-serif;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 1rem;
+}
+
+.rating-card {
+  width: max(300px, 25%);
+  background-color: var(--Very-Dark-Blue);
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+  display: grid;
+  grid-template-columns: 100%;
+}
+
+#rating {
+  display: grid;
+  gap: 1rem;
+  color: var(--Medium-Grey);
+  grid-template-columns: 100%;
+}
+
+#thanks {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 100%;
+}
+
+.thanks-illustration {
+  place-self: center;
+}
+
+.rating {
+  place-self: center;
+  padding: 0.5rem;
+  background-color: var(--Dark-Blue);
+  color: var(--primary);
+  border-radius: 1rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.appreciate {
+  place-self: center;
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+
+.thanks-description {
+  text-align: center;
+  color: var(--Medium-Grey);
+}
+
+.star {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.8rem;
+  height: 2.8rem;
+  background-color: var(--Dark-Blue);
+  border-radius: 50%;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--White);
+}
+
+.description {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.ratings-container {
+  list-style: none;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-evenly;
+  gap: 1rem;
+  padding: 1rem 0;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.ratings-container li {
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  background-color: var(--Dark-Blue);
+  cursor: pointer;
+  user-select: none;
+  transition: 0.2s ease;
+}
+
+.ratings-container li.selected {
+  background-color: var(--primary);
+  color: var(--White);
+}
+
+.ratings-container li.hovered {
+  background-color: var(--Medium-Grey);
+  color: var(--White);
+}
+
+.submit-btn {
+  padding: 1rem;
+  font: inherit;
+  border-radius: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 400;
+  color: var(--White);
+  background-color: var(--primary);
+  border: none;
+  transition: 0.1s linear;
+}
+
+.submit-btn:active {
+  background-color: var(--White);
+  color: var(--primary);
+}
